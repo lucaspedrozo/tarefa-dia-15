@@ -6,9 +6,9 @@ $ANIMAL = $_REQUEST['ANIMAL'];
 if(empty($NOME)){
 
     $dados = array ( 
-        "tipo" => "error";
+        "tipo" => 'error',
         "mensagem" => 'Existem(m) campo(s) obrigatorio(s) nao  preechido(s).'
-    )
+    );
 }
 
 else{
@@ -24,15 +24,15 @@ else{
             "mensagem" => 'Ola ' .$NOME. ', sabemos que seu animal preferido e o peixe'
         );
         break;
-    }
-    case '3' : $dados = array (
+    
+    case '3' : $dados = array(
         "tipo" => 'gato.jfif',
         "mensagem" => 'Ola ' .$NOME. ', sabemos que seu animal preferido e gato'
     );
 }
 
-echo json_decode($dados);
+echo json_encode($dados);
 
 
 
-
+}
